@@ -1,0 +1,152 @@
+{
+  "id": "led",
+  "name": "智能LED",
+  "desc": "智能LED",
+  "protocol": "opcua",
+  "owner": "edge-device-test",
+  "data_format": "Json",
+  "properties": [
+    {
+      "id": "temperature",
+      "name": "温度",
+      "desc": "温度",
+      "interval": "5s",
+      "unit": "摄氏度",
+      "field_type": "int",
+      "report_mode": "",
+      "writeable": true,
+      "aux_props": {
+        "display_name": "temperature"
+      }
+    },
+    {
+      "id": "state",
+      "name": "开关状态",
+      "desc": "led的工作状态,true为开启,false为关闭",
+      "interval": "5s",
+      "unit": "",
+      "field_type": "bool",
+      "report_mode": "",
+      "writeable": true,
+      "aux_props": {
+        "display_name": "state"
+      }
+    },
+    {
+      "id": "color",
+      "name": "LED颜色",
+      "desc": "LED发光颜色,可选 白光:white, 黄光:yellow",
+      "interval": "5s",
+      "unit": "",
+      "field_type": "string",
+      "report_mode": "",
+      "writeable": true,
+      "aux_props": {
+        "display_name": "color"
+      }
+    },
+    {
+      "id": "luminance",
+      "name": "亮度",
+      "desc": "表示LED亮度",
+      "interval": "",
+      "unit": "",
+      "field_type": "float",
+      "report_mode": "",
+      "writeable": false,
+      "aux_props": {
+        "display_name": "luminance"
+      }
+    }
+  ],
+  "events": [
+    {
+      "id": "high_temperature",
+      "name": "高温警告",
+      "desc": "LED灯温度超出正常区间(小于80摄氏度)",
+      "outs": [
+        {
+          "id": "temperature",
+          "name": "温度",
+          "field_type": "float",
+          "desc": ""
+        }
+      ],
+      "aux_props": {
+        "display_name": "high_temperature"
+      }
+    }
+  ],
+  "methods": [
+    {
+      "id": "open",
+      "name": "开",
+      "desc": "打开LED",
+      "ins": null,
+      "outs": null,
+      "aux_props": {
+        "display_name": "open"
+      }
+    },
+    {
+      "id": "close",
+      "name": "关",
+      "desc": "关闭LED",
+      "ins": null,
+      "outs": null,
+      "aux_props": {
+        "display_name": "close"
+      }
+    },
+    {
+      "id": "set_color",
+      "name": "设置颜色",
+      "desc": "调整发光颜色",
+      "ins": [
+        {
+          "id": "expect_color",
+          "name": "颜色",
+          "field_type": "string",
+          "desc": ""
+        }
+      ],
+      "outs": [
+        {
+          "id": "actual_color",
+          "name": "颜色",
+          "field_type": "string",
+          "desc": ""
+        }
+      ],
+      "aux_props": {
+        "display_name": "set_color"
+      }
+    },
+    {
+      "id": "set_luminance",
+      "name": "设置亮度",
+      "desc": "设置LED亮度",
+      "ins": [
+        {
+          "id": "expect_luminance",
+          "name": "预期亮度",
+          "field_type": "float",
+          "desc": ""
+        }
+      ],
+      "outs": [
+        {
+          "id": "actual_luminance",
+          "name": "实际亮度",
+          "field_type": "float",
+          "desc": ""
+        }
+      ],
+      "aux_props": {
+        "display_name": "set_luminance"
+      }
+    }
+  ],
+  "create_time_mills": 1661484965765,
+  "update_time_mills": 1661484965765
+}

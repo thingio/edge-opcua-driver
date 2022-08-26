@@ -1,0 +1,25 @@
+{
+  "id": "led",
+  "owner": "edge-test",
+  "create_time_mills": 1661499948897,
+  "update_time_mills": 1661499948898,
+  "name": "opcua",
+  "desc": "",
+  "product_id": "led",
+  "product_name": "智能LED",
+  "category": "tick",
+  "recording": false,
+  "device_status": "connected",
+  "device_props": {
+    "cert_file": "",
+    "endpoint": "opc.tcp://localhost:4840",
+    "key_file": "",
+    "node_path": "Objects/demo_device",
+    "password": "",
+    "sc_mode": "SignAndEncrypt",
+    "sc_policy": "Basic256Sha256",
+    "username": ""
+  },
+  "device_labels": {},
+  "device_meta": null
+}

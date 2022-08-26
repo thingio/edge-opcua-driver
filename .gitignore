@@ -19,3 +19,9 @@ go.sum
 
 # IDEA
 .idea
+
+# TLS Certificates
+etc/security
+etc/config.yaml
+
+VERSION
